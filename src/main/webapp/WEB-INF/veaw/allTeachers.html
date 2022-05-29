@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>All Teachers </title>
+</head>
+<body>
+<table>
+    <thead>
+            <tr>
+                <th>id</th>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>E-Mail</th>
+            </tr>
+    </thead>
+
+    <tbody>
+    <tr th:each="groupe: ${groupeList} ">
+        <td th:text="${groupe.id}"></td>
+        <td th:text="${groupe.name}"></td>
+        <td th:text="${groupe.lastName}"></td>
+        <td th:text="${groupe.email}"></td>
+
+    </tr>
+    </tbody>
+
+</table>
+<div>
+    <a th:href="/api/groupe/save">
+        <button>Save</button>
+
+    </a>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Sabmite Page</title>
+</head>
+<body>
+
+<form action="#">
+    th:action="@{api/groupe/save}"
+    method="post"
+    th:object="${empatyGroupe}"
+
+    <label for="name">ID</label>
+    <input id="idname" th:value="${empatyGroupe.id}" placeholder="example">
+    <br><br>
+    <label for="name">Name</label>
+    <input id="name" th:value="${empatyGroupe.name}" placeholder="example">
+    <br><br>
+    <label for="name">LastNmae</label>
+    <input id="lastname" th:value="${empatyGroupe.lastname}" placeholder="example">
+    <br><br>
+    <label for="name">E-Mail</label>
+    <input id="email" th:value="${empatyGroupe.email}" placeholder="example">
+    <br><br>
+
+    <button>Submit</button>
+</form>
+
+</body>
+</html>
